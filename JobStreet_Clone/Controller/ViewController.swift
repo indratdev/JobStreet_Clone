@@ -28,6 +28,16 @@ class ViewController: UIViewController {
         let uib = UINib(nibName: "JobsTVCell", bundle: nil)
         myTableView.register(uib, forCellReuseIdentifier: util.JobsCell)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == util.detailSegue){
+            if let controller = segue.destination as? DetailJobsVC {
+                
+            }
+        }
+    }
+    
+    
 
 }
 
@@ -58,6 +68,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = jobsManager.allJobs[indexPath.row].id
         print(id)
+        performSegue(withIdentifier: util.detailSegue, sender: indexPath)
     }
     
 }

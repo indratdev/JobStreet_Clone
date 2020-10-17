@@ -10,5 +10,6 @@ import Foundation
 
 struct Utilities {
     let JobsCell = "JobsCell"
+    let detailSegue = "detailJobSegue"
 }
 

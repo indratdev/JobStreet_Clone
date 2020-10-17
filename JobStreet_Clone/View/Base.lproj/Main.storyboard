@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JobStreet_Clone" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwg-EM-dXe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Recomended Jobs" id="RY8-cd-Hqr"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ycy-tl-msr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -39,14 +39,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nEf-XD-wJB"/>
+                    <navigationItem key="navigationItem" id="EJ6-dg-uad"/>
                     <connections>
                         <outlet property="myTableView" destination="ycy-tl-msr" id="NEZ-2L-O3N"/>
+                        <segue destination="Io8-CP-ktH" kind="show" identifier="detailJobSegue" id="s5x-PD-ATu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="100.44642857142857"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="100.44642857142857"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hV4-5j-lkK">
@@ -58,12 +59,92 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ko0-Oe-kuL"/>
+                        <segue destination="vFh-Oj-104" kind="relationship" relationship="viewControllers" id="Ko0-Oe-kuL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiE-H3-LUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </scene>
+        <!--Detail JobsVC-->
+        <scene sceneID="QZq-Xy-6iu">
+            <objects>
+                <viewController id="Io8-CP-ktH" customClass="DetailJobsVC" customModule="JobStreet_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9D6-LX-qrV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-Vb-MzV" userLabel="JobView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-3e-PxC">
+                                <rect key="frame" x="0.0" y="773" width="414" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-iH-nrG">
+                                        <rect key="frame" x="30" y="3" width="354" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mP-F6-9P1">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="34"/>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36M-2u-pNc">
+                                                <rect key="frame" x="182" y="0.0" width="172" height="34"/>
+                                                <color key="backgroundColor" red="0.9587583883814399" green="0.29646679593094127" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Apply Now">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aOk-iH-nrG" secondAttribute="bottom" constant="3" id="H9k-9z-yW3"/>
+                                    <constraint firstAttribute="trailing" secondItem="aOk-iH-nrG" secondAttribute="trailing" constant="30" id="LhT-81-bfA"/>
+                                    <constraint firstItem="aOk-iH-nrG" firstAttribute="leading" secondItem="Iuf-3e-PxC" secondAttribute="leading" constant="30" id="eg3-qB-cNy"/>
+                                    <constraint firstItem="aOk-iH-nrG" firstAttribute="top" secondItem="Iuf-3e-PxC" secondAttribute="top" constant="3" id="iUt-U4-hcH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rCK-pC-Djd" firstAttribute="trailing" secondItem="Iuf-3e-PxC" secondAttribute="trailing" id="34J-Ek-ZJR"/>
+                            <constraint firstItem="Iuf-3e-PxC" firstAttribute="top" secondItem="ECu-Vb-MzV" secondAttribute="bottom" id="5O8-iB-BWr"/>
+                            <constraint firstItem="ECu-Vb-MzV" firstAttribute="leading" secondItem="rCK-pC-Djd" secondAttribute="leading" id="ThY-hK-w1O"/>
+                            <constraint firstItem="rCK-pC-Djd" firstAttribute="bottom" secondItem="Iuf-3e-PxC" secondAttribute="bottom" id="gZs-h2-g9w"/>
+                            <constraint firstItem="Iuf-3e-PxC" firstAttribute="leading" secondItem="rCK-pC-Djd" secondAttribute="leading" id="iSg-Dp-9fk"/>
+                            <constraint firstItem="rCK-pC-Djd" firstAttribute="bottom" secondItem="ECu-Vb-MzV" secondAttribute="bottom" constant="40" id="kte-g6-Sw0"/>
+                            <constraint firstItem="ECu-Vb-MzV" firstAttribute="top" secondItem="rCK-pC-Djd" secondAttribute="top" id="pMV-pc-maa"/>
+                            <constraint firstItem="rCK-pC-Djd" firstAttribute="trailing" secondItem="ECu-Vb-MzV" secondAttribute="trailing" id="xoG-Up-GXk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rCK-pC-Djd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ekJ-Qw-6xn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BrZ-MT-pHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.6231884057972" y="828.34821428571422"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Lh2-OH-cF2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFh-Oj-104" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nEf-XD-wJB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9st-Xa-x1y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Eap-Tc-hm7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7F-w6-AR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="100.44642857142857"/>
         </scene>
     </scenes>
 </document>
