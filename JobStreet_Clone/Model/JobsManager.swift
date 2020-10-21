@@ -18,9 +18,12 @@ struct JobsManager {
             jobsSalary: "Sekitar gaji yang diharapkan",
             jobsTime: Date(),
             jobsCompanyLogo: "PT Ako Media Asia",
-            jobsDescription:
-            """
-            Becoming a supervisor to a QA team who enables the team to perform functional testing and layout testing pre UAT, as well as other supplementary testing such as VA and load testing pre deployment and perform a final end to end testing after deployment. Progress consistently by providing direction, set up and maintain testing  procedures to ensure all applications delivered on SALT quality standard, and choaching team members along the way. Also, to lead growth and innovation for all aspects of the team especially in maintaining deliverable quality to ensure client’s happiness and drive customer retention though in-scope-bug-free application.
+            jobsDescription: """
+            Becoming a supervisor to a QA team who enables the team to perform functional testing and layout testing pre UAT, as well as other supplementary testing such as VA and load testing pre deployment and perform a final end to end testing after deployment.
+            Progress consistently by providing direction, set up and maintain testing  procedures to ensure all applications delivered on SALT quality standard, and choaching team members along the way.
+            Also, to lead growth and innovation for all aspects of the team especially in maintaining deliverable quality to
+            
+            ensure client’s happiness and drive customer retention though in-scope-bug-free application.
             """,
             joinUS:
             """
@@ -29,18 +32,21 @@ struct JobsManager {
             jobsPosition: "Supervisor/Koordinator",
             jobsQualification:
             """
-            Deep knowledge in Automated Testing (with Selenium Web Driver), Load testing (with Apache jMeter), and Vulnerability Assesment.
-            Have knowledge about HTML & Javascript is a plus
-            Deep understanding in QA - DevOps Integration
-            At least S1 in Information Technology, Computer Science, and Information System.
-            Having a deep understanding of quality assurance is a must, with minimum of 4 years experiences
-            Deep understanding in business process and resource management
+            - Deep knowledge in Automated Testing (with Selenium Web Driver), Load testing (with Apache jMeter), and Vulnerability Assesment.
+            - Have knowledge about HTML & Javascript is a plus
+            - Deep understanding in QA - DevOps Integration
+            - At least S1 in Information Technology, Computer Science, and Information System.
+            - Having a deep understanding of quality assurance is a must, with minimum of 4 years experiences
+            - Deep understanding in business process and resource management
+            
             Innovative:
-            Reengineers process for maximum efficiency and believe in competitive advantage to both work smarter and stay lean.
-            Follow-through on commitments (Integrity) and Persistence.
-            Proactivity : Acts without being told what to do. Brings new ideas to the company.
-            Excellent verbal and written communication skills (English and Bahasa Indonesia)
-            Ability to solve issues and risk management
+            - Reengineers process for maximum efficiency and believe in competitive advantage to both work smarter and stay lean.
+            - Follow-through on commitments (Integrity) and Persistence.
+            
+            Proactivity:
+            - Acts without being told what to do. Brings new ideas to the company.
+            - Excellent verbal and written communication skills (English and Bahasa Indonesia)
+            - Ability to solve issues and risk management
             """,
             jobsExperience: 4,
             jobsType: "Full Time",
@@ -57,6 +63,7 @@ struct JobsManager {
             companyAddress: "Jalan Taman Daan Mogot 6 no 6, West Jakarta, Jakarta, Indonesia",
             jobsBenefit: "Kesehatan, Tunjangan Lainnya",
             companySize: "51 - 200"),
+        
         JobsModel(
             id: 2,
             jobsName: "IOS DEVELOPER",

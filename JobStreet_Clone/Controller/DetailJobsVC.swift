@@ -10,18 +10,41 @@ import UIKit
 
 class DetailJobsVC: UIViewController {
     @IBOutlet weak var viewOne: UIView!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var jobDescriptionLabel: UILabel!
+    
     let jobM = JobsManager()
     var detailID: Int? = 0
+    var data: JobsModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var a = jobM.getNumberIndex(id: detailID!)
+        data = jobM.getNumberIndex(id: detailID!)
 
-        print("ini id nya : \(a)")
+        loadUI()
     }
     
     
+    func loadUI(){
+        //section 1
+        if let datee = data?.jobsTime {
+            timeLabel.text = "\(data?.jobsSalary ?? "") \n\(datee)"
+        }
+        positionLabel.text = data?.jobsName
+        companyLabel.text = data?.jobsCompany
+        locationLabel.text = data?.jobsLocation
+        
+        //section 2
+        
+        jobDescriptionLabel.text = """
+        Jobs Description \n\n\(data?.jobsDescription ?? "") \n\n
+        Job Qualification
+        \(data?.jobsQualification ?? "")
+        """
+    }
 
    
 
