@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     let util = Utilities()
     let jobsManager = JobsManager()
+    lazy var idItem: Int? = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == util.detailSegue){
             if let controller = segue.destination as? DetailJobsVC {
-                
+                controller.detailID = self.idItem
             }
         }
     }
@@ -67,7 +68,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = jobsManager.allJobs[indexPath.row].id
-        print(id)
+        self.idItem = id
         performSegue(withIdentifier: util.detailSegue, sender: indexPath)
     }
     

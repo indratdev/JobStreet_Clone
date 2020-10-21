@@ -19,6 +19,7 @@
 		8F0D1AA7253AEDFB00B83526 /* JobsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D1AA6253AEDFB00B83526 /* JobsModel.swift */; };
 		8F0D1AAA253AEE8500B83526 /* JobsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D1AA9253AEE8500B83526 /* JobsManager.swift */; };
 		8F0D1AAD253B0AFC00B83526 /* DetailJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D1AAC253B0AFC00B83526 /* DetailJobsVC.swift */; };
+		8FBE4707253FC4AB00EDA87A /* DetailJob.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE4706253FC4AB00EDA87A /* DetailJob.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8F0D1AA6253AEDFB00B83526 /* JobsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsModel.swift; sourceTree = "<group>"; };
 		8F0D1AA9253AEE8500B83526 /* JobsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsManager.swift; sourceTree = "<group>"; };
 		8F0D1AAC253B0AFC00B83526 /* DetailJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobsVC.swift; sourceTree = "<group>"; };
+		8FBE4706253FC4AB00EDA87A /* DetailJob.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailJob.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		8F0D1A9E253AE20000B83526 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8FBE4705253FC47200EDA87A /* View Detail */,
 				8F0D1A90253AE0AA00B83526 /* Main.storyboard */,
 				8F0D1A9F253AE22C00B83526 /* JobsTVCell.swift */,
 				8F0D1AA0253AE22C00B83526 /* JobsTVCell.xib */,
@@ -115,6 +118,14 @@
 				8F0D1AAC253B0AFC00B83526 /* DetailJobsVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8FBE4705253FC47200EDA87A /* View Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE4706253FC4AB00EDA87A /* DetailJob.storyboard */,
+			);
+			path = "View Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				8F0D1A94253AE0AD00B83526 /* Assets.xcassets in Resources */,
 				8F0D1A92253AE0AA00B83526 /* Main.storyboard in Resources */,
 				8F0D1AA2253AE22C00B83526 /* JobsTVCell.xib in Resources */,
+				8FBE4707253FC4AB00EDA87A /* DetailJob.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
