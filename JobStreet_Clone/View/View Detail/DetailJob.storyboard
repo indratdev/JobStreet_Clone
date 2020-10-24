@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-sp-l7s" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1586.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1989"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWP-7M-krG" userLabel="View1">
                                                 <rect key="frame" x="8" y="8" width="398" height="203"/>
@@ -120,6 +120,9 @@
                                                             <segment title="Second"/>
                                                         </segments>
                                                         <color key="selectedSegmentTintColor" red="0.31284492950789722" green="0.68962835293557179" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="segmentControlPressed:" destination="Io8-CP-ktH" eventType="valueChanged" id="kj6-Em-AIe"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,7 +133,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="IjR-sQ-Imr" secondAttribute="bottom" constant="5" id="j5d-TV-waq"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-Bd-CDF" userLabel="View3">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-Bd-CDF" userLabel="View jobDescription">
                                                 <rect key="frame" x="8" y="268" width="398" height="486.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cu-eP-Jcc">
@@ -167,7 +170,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-1A-N2M">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-1A-N2M">
                                                         <rect key="frame" x="8" y="39" width="382" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -214,7 +217,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-o8-XJZ" userLabel="View Company Overview">
-                                                <rect key="frame" x="8" y="912.5" width="398" height="69.5"/>
+                                                <rect key="frame" x="8" y="912.5" width="398" height="495.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zY-MY-hcN">
                                                         <rect key="frame" x="8" y="8" width="382" height="23"/>
@@ -222,8 +225,9 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-qp-5u9">
-                                                        <rect key="frame" x="8" y="39" width="382" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-qp-5u9">
+                                                        <rect key="frame" x="8" y="39" width="382" height="446.5"/>
+                                                        <mutableString key="text">Luo Yixiu (20 Oktober 1889 – 11 Februari 1910) adalah istri pertama pemimpin politik dan revolusioner Tiongkok Mao Zedong. Menurut Mao, ia dan Luo Yixiu dijodohkan oleh ayah mereka masing-masing, Mao Yichang dan Luo Helou. Luo berusia delapan belas tahun dan Mao berusia empat belas tahun pada saat bertunangan. Meskipun mau mengikuti upacara pernikahan, Mao mengaku bahwa ia tidak senang dengan pernikahan tersebut, tidak pernah berhubungan seks dengan Luo, dan menolak untuk tinggal dengannya. Dengan menanggung malu di masyarakat, Luo tinggal dengan orang tua Mao selama dua tahun, hingga akhirnya meninggal karena disentri, sementara Mao berpindah dari desa tersebut dan melanjutkan pembelajarannya di tempat lain, kemudian menjadi seorang anggota pendiri Partai Komunis Tiongkok. Berbagai biografer menyatakan bahwa pengalamannya menikah dengan Luo menjadikannya pengkritik tradisi perjodohan dan seorang pembela hak perempuan</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -241,7 +245,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxO-Nw-7oZ" userLabel="View Work Location">
-                                                <rect key="frame" x="8" y="990" width="398" height="69.5"/>
+                                                <rect key="frame" x="8" y="1416" width="398" height="64.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npC-wP-0DN">
                                                         <rect key="frame" x="8" y="8" width="382" height="23"/>
@@ -262,7 +266,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="UJq-yO-Nmc" secondAttribute="trailing" constant="8" id="8qi-X8-9NJ"/>
                                                     <constraint firstItem="npC-wP-0DN" firstAttribute="leading" secondItem="OxO-Nw-7oZ" secondAttribute="leading" constant="8" id="DPa-xA-tWb"/>
                                                     <constraint firstItem="npC-wP-0DN" firstAttribute="top" secondItem="OxO-Nw-7oZ" secondAttribute="top" constant="8" id="Gzw-Mb-DBD"/>
-                                                    <constraint firstAttribute="bottom" secondItem="UJq-yO-Nmc" secondAttribute="bottom" constant="10" id="KsN-JU-wCX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UJq-yO-Nmc" secondAttribute="bottom" constant="5" id="KsN-JU-wCX"/>
                                                     <constraint firstItem="npC-wP-0DN" firstAttribute="top" secondItem="OxO-Nw-7oZ" secondAttribute="top" constant="8" id="Mcg-0j-jiN"/>
                                                     <constraint firstAttribute="trailing" secondItem="npC-wP-0DN" secondAttribute="trailing" constant="8" id="OUQ-Ho-Pc2"/>
                                                     <constraint firstAttribute="trailing" secondItem="npC-wP-0DN" secondAttribute="trailing" constant="8" id="Yw3-XD-Tit"/>
@@ -271,7 +275,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ab0-9Q-QNT" userLabel="View Additional Info">
-                                                <rect key="frame" x="8" y="1067.5" width="398" height="509"/>
+                                                <rect key="frame" x="8" y="1488.5" width="398" height="490.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Information Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-0p-Jhz">
                                                         <rect key="frame" x="8" y="8" width="382" height="23"/>
@@ -295,7 +299,7 @@
                                                     <constraint firstItem="VNB-qz-8JY" firstAttribute="leading" secondItem="Ab0-9Q-QNT" secondAttribute="leading" constant="8" id="SNr-MD-afa"/>
                                                     <constraint firstAttribute="trailing" secondItem="VNB-qz-8JY" secondAttribute="trailing" constant="8" id="THw-xJ-ZKs"/>
                                                     <constraint firstItem="XKh-0p-Jhz" firstAttribute="top" secondItem="Ab0-9Q-QNT" secondAttribute="top" constant="8" id="eUd-73-aC7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="VNB-qz-8JY" secondAttribute="bottom" constant="23.5" id="pMG-bz-bEj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="VNB-qz-8JY" secondAttribute="bottom" constant="5" id="pMG-bz-bEj"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -376,11 +380,20 @@
                     <navigationItem key="navigationItem" id="ekJ-Qw-6xn"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addInfoLabel" destination="VNB-qz-8JY" id="t6S-M7-B7u"/>
+                        <outlet property="additionalLabel" destination="8fw-Ng-JLX" id="Z0a-Aq-ZMR"/>
                         <outlet property="companyLabel" destination="TVD-vv-LYB" id="m58-Yt-mby"/>
+                        <outlet property="companyOverviewLabel" destination="Hml-qp-5u9" id="Vuc-fy-umf"/>
+                        <outlet property="jobDescriptionLabel" destination="B98-mU-ydR" id="1Rc-1h-wMP"/>
+                        <outlet property="joinUSLabel" destination="Zwr-1A-N2M" id="dZw-o8-dLA"/>
                         <outlet property="locationLabel" destination="56A-eX-Wm8" id="Sb4-5Q-kz3"/>
+                        <outlet property="myScroolview" destination="H6x-Hx-9zv" id="ej0-7T-rsh"/>
                         <outlet property="positionLabel" destination="dFR-C6-Dpu" id="OCC-Pd-R8e"/>
                         <outlet property="segmentControl" destination="IjR-sQ-Imr" id="sSt-Nf-YO3"/>
                         <outlet property="timeLabel" destination="uc5-vd-IOQ" id="Xsf-HH-At2"/>
+                        <outlet property="viewCompanyOverview" destination="ANs-o8-XJZ" id="flE-Qw-TRG"/>
+                        <outlet property="viewDescription" destination="5eb-Bd-CDF" id="PgA-4j-zAs"/>
+                        <outlet property="workLocationLabel" destination="UJq-yO-Nmc" id="kwo-B3-za4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrZ-MT-pHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
