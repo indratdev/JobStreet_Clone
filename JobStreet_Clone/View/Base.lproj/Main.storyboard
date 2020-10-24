@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recomended Jobs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JobStreet_Clone" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,31 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwg-EM-dXe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Recomended Jobs" id="RY8-cd-Hqr"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ycy-tl-msr">
-                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ycy-tl-msr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BRb-ZU-X4G"/>
                             <constraint firstItem="ycy-tl-msr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J5T-mH-ZHN"/>
-                            <constraint firstItem="Zwg-EM-dXe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KKc-25-i1H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ycy-tl-msr" secondAttribute="bottom" id="VyV-7k-CS2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ycy-tl-msr" secondAttribute="trailing" id="Vzs-TI-Dld"/>
-                            <constraint firstItem="ycy-tl-msr" firstAttribute="top" secondItem="Zwg-EM-dXe" secondAttribute="bottom" id="Wlj-cl-PQe"/>
-                            <constraint firstItem="Zwg-EM-dXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cB4-6g-WZb"/>
-                            <constraint firstItem="Zwg-EM-dXe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="l1a-OZ-toj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EJ6-dg-uad"/>
+                    <navigationItem key="navigationItem" title="Recomended Jobs" id="EJ6-dg-uad"/>
                     <connections>
                         <outlet property="myTableView" destination="ycy-tl-msr" id="NEZ-2L-O3N"/>
                         <segue destination="usC-fT-SYJ" kind="show" identifier="detailJobSegue" id="s5x-PD-ATu"/>
@@ -58,21 +49,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.34418790129999999" blue="0.71357471449999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vFh-Oj-104" kind="relationship" relationship="viewControllers" id="Ko0-Oe-kuL"/>
+                        <segue destination="PeZ-6J-O1m" kind="relationship" relationship="viewControllers" id="Ovb-b4-VbP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiE-H3-LUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </scene>
-        <!--Item-->
+        <!--Jobs-->
         <scene sceneID="Lh2-OH-cF2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFh-Oj-104" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nEf-XD-wJB"/>
+                    <tabBarItem key="tabBarItem" title="Jobs" id="m0t-yA-1PY"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9st-Xa-x1y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,6 +89,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-nn-0db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1958" y="678"/>
+        </scene>
+        <!--SavedJobs-->
+        <scene sceneID="6o0-U0-rXZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SavedJobs" id="PeZ-6J-O1m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0wk-hV-pPz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywn-LH-24E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="875"/>
         </scene>
     </scenes>
 </document>

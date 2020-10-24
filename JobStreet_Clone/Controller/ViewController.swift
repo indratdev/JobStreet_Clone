@@ -19,8 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         load()
+//        tabbarnya()
         
     }
+    
+    
     
     func load(){
         myTableView.delegate = self
