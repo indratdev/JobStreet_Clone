@@ -117,7 +117,7 @@ struct JobsManager {
     func getNumberIndex(id: Int) -> JobsModel? {
         var dataOwn: JobsModel?
         
-        for (key,data) in allJobs.enumerated() {
+        for (_,data) in allJobs.enumerated() {
             if data.id == id {
                 dataOwn = data
             }
