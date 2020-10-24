@@ -15,6 +15,7 @@ class DetailJobsVC: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var jobDescriptionLabel: UILabel!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let jobM = JobsManager()
     var detailID: Int? = 0
@@ -38,12 +39,14 @@ class DetailJobsVC: UIViewController {
         locationLabel.text = data?.jobsLocation
         
         //section 2
+       loadSegmentControl()
         
-        jobDescriptionLabel.text = """
-        Jobs Description \n\n\(data?.jobsDescription ?? "") \n\n
-        Job Qualification
-        \(data?.jobsQualification ?? "")
-        """
+    }
+    
+    private func loadSegmentControl(){
+        segmentControl.setTitle("Job Description", forSegmentAt: 0)
+        segmentControl.setTitle("Company Overview", forSegmentAt: 1)
+        segmentControl.selectedSegmentIndex = 0
     }
 
    

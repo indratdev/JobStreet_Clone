@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-sp-l7s" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWP-7M-krG" userLabel="View1">
                                                 <rect key="frame" x="8" y="8" width="398" height="203"/>
@@ -111,21 +111,23 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-4j-HKb" userLabel="View2">
-                                                <rect key="frame" x="8" y="219" width="398" height="20.5"/>
+                                                <rect key="frame" x="8" y="219" width="398" height="41"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCA-zi-qNU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IjR-sQ-Imr">
+                                                        <rect key="frame" x="20" y="5" width="358" height="32"/>
+                                                        <segments>
+                                                            <segment title="First"/>
+                                                            <segment title="Second"/>
+                                                        </segments>
+                                                        <color key="selectedSegmentTintColor" red="0.31284492950789722" green="0.68962835293557179" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="hCA-zi-qNU" firstAttribute="leading" secondItem="ho4-4j-HKb" secondAttribute="leading" id="Do6-Dp-8pA"/>
-                                                    <constraint firstItem="hCA-zi-qNU" firstAttribute="top" secondItem="ho4-4j-HKb" secondAttribute="top" id="JFe-lf-wcS"/>
-                                                    <constraint firstAttribute="trailing" secondItem="hCA-zi-qNU" secondAttribute="trailing" id="JU2-Db-pl5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="hCA-zi-qNU" secondAttribute="bottom" id="e2z-km-Iag"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IjR-sQ-Imr" secondAttribute="trailing" constant="20" id="LGZ-sR-amE"/>
+                                                    <constraint firstItem="IjR-sQ-Imr" firstAttribute="leading" secondItem="ho4-4j-HKb" secondAttribute="leading" constant="20" id="QEs-oe-0OD"/>
+                                                    <constraint firstItem="IjR-sQ-Imr" firstAttribute="top" secondItem="ho4-4j-HKb" secondAttribute="top" constant="5" id="VIl-cz-vmK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IjR-sQ-Imr" secondAttribute="bottom" constant="5" id="j5d-TV-waq"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -170,9 +172,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="companyLabel" destination="TVD-vv-LYB" id="m58-Yt-mby"/>
-                        <outlet property="jobDescriptionLabel" destination="hCA-zi-qNU" id="HaZ-v9-orI"/>
                         <outlet property="locationLabel" destination="56A-eX-Wm8" id="Sb4-5Q-kz3"/>
                         <outlet property="positionLabel" destination="dFR-C6-Dpu" id="OCC-Pd-R8e"/>
+                        <outlet property="segmentControl" destination="IjR-sQ-Imr" id="sSt-Nf-YO3"/>
                         <outlet property="timeLabel" destination="uc5-vd-IOQ" id="Xsf-HH-At2"/>
                     </connections>
                 </viewController>
