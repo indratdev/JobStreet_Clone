@@ -29,6 +29,7 @@ class DetailJobsVC: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let jobM = JobsManager()
+    let notif = Notif()
     var detailID: Int? = 0
     var data: JobsModel?
     var jobSaved: [NSManagedObject] = []
@@ -134,6 +135,7 @@ class DetailJobsVC: UIViewController {
             do {
                 try context.save() // <- remember to put this :)
                 print("saving new")
+                notif.showLocalNotif(title: "Delete", subtitle: "Remove list Jobs", style: .warning)
             } catch {
                 // Do something... fatalerror
                 print("error save")
@@ -141,6 +143,7 @@ class DetailJobsVC: UIViewController {
             print("------ end proses hapus ---------------------")
         }else{
             savedJob(myIDJob: id)
+            notif.showLocalNotif(title: "Save", subtitle: "Saved Jobs Success", style: .success)
         }
         
         buttonColor(id: id)
