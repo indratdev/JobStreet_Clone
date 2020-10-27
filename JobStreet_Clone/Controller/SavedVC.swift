@@ -24,7 +24,6 @@ class SavedVC: UIViewController {
         
         myTableView.delegate = self
         myTableView.dataSource = self
-        
         let uib = UINib(nibName: "JobsTVCell", bundle: nil)
         myTableView.register(uib, forCellReuseIdentifier: util.JobsCell)
         
@@ -41,7 +40,6 @@ class SavedVC: UIViewController {
             DispatchQueue.main.async {
                 self.myTableView.reloadData()
             }
-            
         }catch{
             print("Error reload data")
         }
