@@ -24,6 +24,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mP-F6-9P1">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="savePressed:" destination="Io8-CP-ktH" eventType="touchUpInside" id="TAg-96-wp1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36M-2u-pNc">
                                                 <rect key="frame" x="182" y="0.0" width="172" height="30"/>
@@ -389,6 +392,7 @@
                         <outlet property="locationLabel" destination="56A-eX-Wm8" id="Sb4-5Q-kz3"/>
                         <outlet property="myScroolview" destination="H6x-Hx-9zv" id="ej0-7T-rsh"/>
                         <outlet property="positionLabel" destination="dFR-C6-Dpu" id="OCC-Pd-R8e"/>
+                        <outlet property="saveBtn" destination="4mP-F6-9P1" id="Cqb-T2-jqO"/>
                         <outlet property="segmentControl" destination="IjR-sQ-Imr" id="sSt-Nf-YO3"/>
                         <outlet property="timeLabel" destination="uc5-vd-IOQ" id="Xsf-HH-At2"/>
                         <outlet property="viewCompanyOverview" destination="ANs-o8-XJZ" id="flE-Qw-TRG"/>

@@ -11,5 +11,6 @@ import Foundation
 struct Utilities {
     let JobsCell = "JobsCell"
     let detailSegue = "detailJobSegue"
+    var jobsTVCellHeight =  193
 }
 

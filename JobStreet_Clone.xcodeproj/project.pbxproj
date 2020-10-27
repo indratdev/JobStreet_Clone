@@ -21,6 +21,9 @@
 		8F0D1AAD253B0AFC00B83526 /* DetailJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D1AAC253B0AFC00B83526 /* DetailJobsVC.swift */; };
 		8F9C59A3254471BD0021549C /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C59A2254471BD0021549C /* SavedVC.swift */; };
 		8F9C59A5254479300021549C /* SavedJobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C59A4254479300021549C /* SavedJobs.storyboard */; };
+		8F9C59A925447B810021549C /* JobsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C59A725447B810021549C /* JobsData.xcdatamodeld */; };
+		8F9C59AC25447C7F0021549C /* Jobs+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C59AA25447C7F0021549C /* Jobs+CoreDataClass.swift */; };
+		8F9C59AD25447C7F0021549C /* Jobs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C59AB25447C7F0021549C /* Jobs+CoreDataProperties.swift */; };
 		8FBE4707253FC4AB00EDA87A /* DetailJob.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE4706253FC4AB00EDA87A /* DetailJob.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		8F0D1AAC253B0AFC00B83526 /* DetailJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobsVC.swift; sourceTree = "<group>"; };
 		8F9C59A2254471BD0021549C /* SavedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
 		8F9C59A4254479300021549C /* SavedJobs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavedJobs.storyboard; sourceTree = "<group>"; };
+		8F9C59A825447B810021549C /* JobsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JobsData.xcdatamodel; sourceTree = "<group>"; };
+		8F9C59AA25447C7F0021549C /* Jobs+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jobs+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8F9C59AB25447C7F0021549C /* Jobs+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jobs+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8FBE4706253FC4AB00EDA87A /* DetailJob.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailJob.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,7 @@
 		8F0D1A89253AE0AA00B83526 /* JobStreet_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				8F9C59A625447B580021549C /* Data Model */,
 				8F0D1AA8253AEE7500B83526 /* Model */,
 				8F0D1A9E253AE20000B83526 /* View */,
 				8F0D1AAB253AFE6300B83526 /* Controller */,
@@ -123,6 +130,16 @@
 				8F9C59A2254471BD0021549C /* SavedVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F9C59A625447B580021549C /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C59AA25447C7F0021549C /* Jobs+CoreDataClass.swift */,
+				8F9C59AB25447C7F0021549C /* Jobs+CoreDataProperties.swift */,
+				8F9C59A725447B810021549C /* JobsData.xcdatamodeld */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		8FBE4705253FC47200EDA87A /* View Detail */ = {
@@ -209,10 +226,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0D1AAA253AEE8500B83526 /* JobsManager.swift in Sources */,
+				8F9C59AD25447C7F0021549C /* Jobs+CoreDataProperties.swift in Sources */,
 				8F0D1A8F253AE0AA00B83526 /* ViewController.swift in Sources */,
 				8F0D1A8B253AE0AA00B83526 /* AppDelegate.swift in Sources */,
+				8F9C59AC25447C7F0021549C /* Jobs+CoreDataClass.swift in Sources */,
 				8F0D1A8D253AE0AA00B83526 /* SceneDelegate.swift in Sources */,
 				8F9C59A3254471BD0021549C /* SavedVC.swift in Sources */,
+				8F9C59A925447B810021549C /* JobsData.xcdatamodeld in Sources */,
 				8F0D1AA4253AE78500B83526 /* Utilities.swift in Sources */,
 				8F0D1AA1253AE22C00B83526 /* JobsTVCell.swift in Sources */,
 				8F0D1AA7253AEDFB00B83526 /* JobsModel.swift in Sources */,
@@ -412,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8F9C59A725447B810021549C /* JobsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8F9C59A825447B810021549C /* JobsData.xcdatamodel */,
+			);
+			currentVersion = 8F9C59A825447B810021549C /* JobsData.xcdatamodel */;
+			path = JobsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8F0D1A7F253AE0AA00B83526 /* Project object */;
 }
