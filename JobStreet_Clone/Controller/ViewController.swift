@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
+     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let util = Utilities()
     let jobsManager = JobsManager()
@@ -19,8 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         load()
+//        tabbarnya()
+//        deleteAllData("Jobs")
         
     }
+    
+    
     
     func load(){
         myTableView.delegate = self
@@ -62,7 +68,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 193
+        return CGFloat(util.jobsTVCellHeight)
     }
     
     
@@ -72,4 +78,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: util.detailSegue, sender: indexPath)
     }
     
+}
+
+
+extension ViewController {
+   
+    func deleteAllData(_ entity:String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try context.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                context.delete(objectData)
+            }
+        } catch let error {
+            print("Detele all data in \(entity) error :", error)
+        }
+    }
 }
