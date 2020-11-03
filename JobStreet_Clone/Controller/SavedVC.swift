@@ -30,6 +30,10 @@ class SavedVC: UIViewController {
         loadDataSaved()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadDataSaved()
+    }
+    
     func loadDataSaved(){
         let request = Jobs.fetchRequest() as NSFetchRequest<Jobs>
         let sort = NSSortDescriptor(key: "id_jobs", ascending: true)
